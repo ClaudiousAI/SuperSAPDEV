@@ -1,0 +1,1 @@
+{"domains_in_scope":["D01","D02","D03","D04","D05","D06","D07","D08","D09","D10","D11","D12","D13","D14","D15"],"evidence_class":"MOCK","fixture_sha256":"1037888df52a95f7d57116abc10184bfe2033021b7dfc40bf374f0d4d0fceb58","hosts_in_scope":["claude","codex","opencode","deepseek"],"schema_version":"1.0.0","status":"ok"}

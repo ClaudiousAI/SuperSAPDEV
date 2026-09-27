@@ -1,0 +1,6 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "workspace-smoke",
+  "evidence_class": "MOCK",
+  "message": "Offline workspace fixture. No SAP claims or harvested content."
+}

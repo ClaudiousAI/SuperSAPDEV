@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:supersap:schema:smoke:1.0.0",
+  "title": "Synthetic workspace smoke fixture (not harvested knowledge)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "case_id", "evidence_class", "message"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "case_id": {"const": "workspace-smoke"},
+    "evidence_class": {"const": "MOCK"},
+    "message": {"type": "string", "minLength": 1, "maxLength": 256}
+  }
+}
