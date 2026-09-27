@@ -1,5 +1,9 @@
 # TASK-001 acceptance record — 2026-09-27
 
+Follow-up: [CI/CD evidence](CI-CD.md) supersedes the historical remote-run blockers
+below. All nine hosted OS/Python cells have now passed. Human acceptance review
+remains pending; this original local-verification record is retained as history.
+
 Implementation complete for this increment; full acceptance remains pending the
 unexecuted OS/Python CI matrix and human review. TASK-002 has not started.
 

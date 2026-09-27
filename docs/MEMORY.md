@@ -8,10 +8,10 @@ passes: 37 tests, Ruff lint/format, strict mypy, byte-identical wheel/sdist buil
 sdist-to-wheel reconstruction, clean wheel install and both CLI entry points.
 See [exact evidence and changed files](evidence/TASK-001.md).
 
-TASK-001 is **not marked fully accepted**: macOS/Linux and Python 3.12/3.13 checks
-are configured but remote execution is pending. The user has now authorized
-GitHub CI/CD setup for `ClaudiousAI/SuperSAPDEV`; see [CI/CD evidence](evidence/CI-CD.md)
-and [operations](CI_CD.md). Initial
+GitHub CI/CD is installed in `ClaudiousAI/SuperSAPDEV`. All nine hosted OS/Python
+matrix cells now pass, including clean installation and reproducibility. Human
+acceptance review remains pending; see [CI/CD evidence](evidence/CI-CD.md) and
+[operations](CI_CD.md). Initial
 Windows Application Control launcher errors disappeared on subsequent required
 checks without policy changes; no skipped tests or bypass option remain.
 
@@ -29,10 +29,9 @@ platform must not override this full skill-harvesting product dossier.
 
 ## Next action
 
-Run `.github/workflows/ci.yml` when a GitHub repository/runner is available, retain
-the actual matrix results and complete TASK-001 acceptance review. TASK-002 is next
-in dependency order; it has not been started because this request stops at the
-TASK-001 boundary. Validate actual host behavior and current SAP documentation
+Review the retained matrix evidence to complete TASK-001 acceptance. TASK-002 is
+next in dependency order; it has not been started because this request is scoped
+to CI/CD. Validate actual host behavior and current SAP documentation
 when implementing each pack. Repository setup credentials are process-only and
 must not enter source or workflows. All current evidence is STATIC or MOCK,
 never LIVE SAP evidence.
@@ -49,6 +48,11 @@ accepted decisions and full backlog requirements remain intact.
 ADR-013 adds reusable CI checks, retained JUnit/candidate artifacts, pinned action
 updates and manual draft prerelease preparation. The draft job consumes tested
 bytes and never publishes; TASK-022's full release gates remain outstanding.
+Initial CI run 36296468996 and delivery run 36296503951 both passed on source
+commit `43a88110ebaa26647dd7506b56148fa6abf4f9fe`. One unpublished draft contains
+five verified assets; ten delivery-run artifacts retain test/candidate evidence.
+The repository origin has no embedded credentials and the working tree is now
+under Git. Future source changes should use branches and pass **CI required**.
 
 ## Open implementation choices
 

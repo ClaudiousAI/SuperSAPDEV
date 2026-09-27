@@ -37,7 +37,7 @@ Mapped requirement and ADR references; implemented code and schemas; positive/ne
 
 | Task | State | Evidence / next dependency |
 |---|---|---|
-| TASK-001 | Implemented; cross-platform acceptance pending | [Evidence](docs/evidence/TASK-001.md). Windows Python 3.14: 37 tests and clean package/reproducibility checks pass. Remaining OS/Python CI executions pending. |
+| TASK-001 | Implemented; nine-cell CI verified; human acceptance review pending | [Initial evidence](docs/evidence/TASK-001.md), [hosted CI evidence](docs/evidence/CI-CD.md). All nine OS/Python cells pass tests, clean package installation and reproducibility checks. |
 | TASK-002–024 | Not started | Full scope and dependency graph above remain unchanged. TASK-002 follows TASK-001; this change stops at the requested task boundary. |
 
 CI/CD follow-up (2026-09-27): TASK-001 automation is extended with retained

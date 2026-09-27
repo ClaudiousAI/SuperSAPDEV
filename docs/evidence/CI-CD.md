@@ -35,12 +35,40 @@ One initial Ruff line-length/format issue was corrected with the formatter and
 the full lint/format/type checks rerun successfully. The workflow validator
 reported no errors.
 
+The sandbox denied one overwrite-refusal invocation; repeating the identical
+check with approved execution returned the expected exit 2 without changing
+the existing candidate. Independent `Get-FileHash` checks matched all four
+entries in `SHA256SUMS`.
+
 ## GitHub execution
 
 Before setup, the public repository existed with no refs or commits. The local
-workspace had no Git metadata. Remote matrix execution, draft preparation and
-branch-protection setup are pending at this checkpoint; results will be recorded
-after pushing and observing actual workflow runs.
+workspace had no Git metadata. Initialized `main`, configured a credential-free
+HTTPS origin and pushed 51 source files after a staged secret scan. The supplied
+credential was used only through process memory, never stored in project files,
+Git remote URLs or workflow secrets.
+
+Source commit: `43a88110ebaa26647dd7506b56148fa6abf4f9fe`.
+[CI run 36296468996](https://github.com/ClaudiousAI/SuperSAPDEV/actions/runs/36296468996):
+all nine OS/Python matrix jobs and **CI required** passed on GitHub-hosted runners. This covers
+Windows/macOS/Linux × Python 3.12/3.13/3.14, with all required steps enabled.
+These are STATIC/MOCK executions, not SAP or coding-agent host conformance.
+
+[Manual delivery run 36296503951](https://github.com/ClaudiousAI/SuperSAPDEV/actions/runs/36296503951)
+passed all nine matrix jobs and the draft job for the same source commit.
+GitHub reports ten retained artifacts: nine JUnit bundles and the verified
+candidate. Authenticated inspection confirms `draft: true`, `prerelease: true`
+and five attached assets (wheel, sdist, requirements, REVIEW.md, SHA256SUMS).
+Candidate tag: `candidate-43a88110ebaa-36296503951-1`.
+[Unpublished draft](https://github.com/ClaudiousAI/SuperSAPDEV/releases/tag/untagged-0760765baf1ee51f0f32)
+requires repository write access to view. Delivery verifies checksums before
+creating it and records the source commit and successful run in its notes.
+
+Repository protection configuration is applied after the evidence commit is
+pushed: `main` requires **CI required**, strict up-to-date checks, enforcement
+for administrators, and no force pushes or deletions. Check the repository's
+branch settings for the current server-side state; these controls are not
+implemented by YAML alone. No production environment or publishing secret exists.
 
 No harvested content, package release or SAP change has been published. There
 is no LIVE SAP evidence. Current pipeline artifacts contain development tooling

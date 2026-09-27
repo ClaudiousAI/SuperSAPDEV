@@ -7,6 +7,10 @@ TASK-001's implemented checks and OS/Python execution ledger are recorded in
 [`DEVELOPMENT.md`](DEVELOPMENT.md). Its synthetic smoke/schema checks validate
 the workspace only. They do not satisfy domain, host or live SAP conformance.
 
+The executed nine-cell GitHub matrix and draft-delivery checks are recorded in
+[`evidence/CI-CD.md`](evidence/CI-CD.md). CI retains JUnit reports and a verified
+development candidate; draft delivery checks its hashes before attaching it.
+
 | Level | Representative tests | Gate |
 |---|---|---|
 | Unit/schema | Canonical URIs, hashes, applicability interval, state transitions, conflicting claims, license and prompt-injection classification, CLI error codes. | No schema bypass or invalid transition. |
